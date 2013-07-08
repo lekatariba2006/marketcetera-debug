@@ -1,1 +1,0 @@
-OrderCancelReject ${ACTUAL_ORDER_ID} received at ${DATE} for ${ORDER_TYPE} order of ${TRADE_ID}

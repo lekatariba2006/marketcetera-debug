@@ -1,1 +1,0 @@
-Broker ${BROKER_ID} disconnected at ${DATE}
