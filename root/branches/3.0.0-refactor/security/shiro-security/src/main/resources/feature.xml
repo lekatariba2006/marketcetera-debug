@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<features xmlns="http://karaf.apache.org/xmlns/features/v1.1.0" name="org.marketcetera.security.shiro-security">
-    <feature name="org.marketcetera.security.shiro-security" version="3.0.1" description="Marketcetera Shiro Security">
-        <!-- marketcetera bundles -->
-        <bundle>mvn:org.marketcetera.security/shiro-security/3.0.1</bundle>
-        <!-- external bundles -->
-        <bundle>mvn:org.apache.shiro/shiro-core/1.2.1</bundle>
-    </feature>
-</features>

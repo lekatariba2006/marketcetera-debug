@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"  >
-    <bean id="shiroSecurityService" class="org.marketcetera.security.shiro.impl.SecurityServiceImpl" init-method="init">
-        <property name="userDao" ref="userDaoBean"/>
-    </bean>
-    <service id="securityService" interface="org.marketcetera.security.SecurityService" ref="shiroSecurityService"/>
-    <reference id="userDaoBean" interface="org.marketcetera.dao.UserDao"/>
-</blueprint>
