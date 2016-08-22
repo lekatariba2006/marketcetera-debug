@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration shutdownHook="disable" monitorInterval="30">
+  <Appenders>
+    <Console name="STDOUT" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{DATE} %5p [%t] %c{3} (%F:%L) - %m%n"/>
+    </Console>
+    <RollingRandomAccessFile name="FILE" fileName="target/logs/studio.log" filePattern="target/logs/studio-%i.log.gz" append="false">
+      <PatternLayout pattern="%d{DATE} %5p [%t] %c{3} (%F:%L) - %m%n"/>
+      <Policies>
+        <SizeBasedTriggeringPolicy size="100 MB"/>
+      </Policies>
+      <DefaultRolloverStrategy max="1000"/>
+    </RollingRandomAccessFile>
+    <RollingRandomAccessFile name="METRICS" fileName="target/logs/metrics.log" filePattern="target/logs/metrics-%i.log.gz" append="false">
+      <PatternLayout pattern="%d{DATE} %m%n"/>
+      <Policies>
+        <SizeBasedTriggeringPolicy size="100 MB"/>
+      </Policies>
+    </RollingRandomAccessFile>
+  </Appenders>
+  <Loggers>
+    <Root level="info">
+      <AppenderRef ref="FILE"/>
+      <AppenderRef ref="STDOUT"/>
+    </Root>
+    <logger name="org.marketcetera" level="info"/>
+    <logger name="metrics" level="info" additivity="false">
+      <AppenderRef ref="METRICS"/>
+    </logger>
+  </Loggers>
+</Configuration>
