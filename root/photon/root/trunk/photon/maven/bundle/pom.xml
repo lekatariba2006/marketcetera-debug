@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
-<!--
-  - Author: will@marketcetera.com
-  - Since: 0.8.0
-  - Version: $Id$
-  - $License$
-  -->
-
-<project
- xmlns="http://maven.apache.org/POM/4.0.0"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation=
- "http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <parent>
     <groupId>org.marketcetera</groupId>
     <artifactId>photon-maven</artifactId>
@@ -22,9 +10,7 @@
   </parent>
   <artifactId>photon-bundle</artifactId>
   <packaging>bundle</packaging>
-
   <name>Photon Third Party Dependency Bundle</name>
-
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -37,6 +23,10 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>client</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>saclient</artifactId>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -123,10 +113,8 @@
       <artifactId>metrics-core</artifactId>
     </dependency>
   </dependencies>
-
   <build>
     <plugins>
-
       <!-- Don't generate Eclipse metadata. -->
       <plugin>
         <artifactId>maven-eclipse-plugin</artifactId>
@@ -134,7 +122,6 @@
           <skip>true</skip>
         </configuration>
       </plugin>
-
       <plugin>
         <groupId>org.apache.felix</groupId>
         <artifactId>maven-bundle-plugin</artifactId>
@@ -148,7 +135,7 @@
             <Bundle-SymbolicName>org.marketcetera.thirdparty</Bundle-SymbolicName>
             <Bundle-Vendor>Marketcetera, Inc.</Bundle-Vendor>
             <!-- Include all the dependent jars except Marketcetera ones which should have their own plugins. -->
-            <Embed-Dependency>*;groupId=!org.marketcetera</Embed-Dependency>
+            <Embed-Dependency>*</Embed-Dependency>
             <Embed-Transitive>true</Embed-Transitive>
             <!-- Only the jars should be on the classpath. -->
             <Bundle-ClassPath>{maven-dependencies}</Bundle-ClassPath>

@@ -6,8 +6,8 @@ Bundle-Vendor: %providerName
 Bundle-Version: 3.1.0
 Bundle-Activator: org.marketcetera.photon.internal.module.Activator
 Require-Bundle: org.eclipse.core.runtime,
- org.marketcetera.core;visibility:=reexport,
- org.marketcetera.photon.commons
+ org.marketcetera.photon.commons,
+ org.marketcetera.thirdparty
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: org.marketcetera.photon.module

@@ -13,7 +13,6 @@ Export-Package: net.miginfocom.layout,
  org.marketcetera.photon.commons.ui.databinding,
  org.marketcetera.photon.commons.ui.table
 Require-Bundle: org.eclipse.core.runtime,
- org.marketcetera.util,
  org.eclipse.jface.databinding,
  org.eclipse.core.databinding,
  org.eclipse.core.databinding.beans,
@@ -24,3 +23,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.jface
 Bundle-Localization: plugin
 Eclipse-ExtensibleAPI: true
+Import-Package: com.google.common.cache;version="20.0.0",
+ javax.annotation.concurrent,
+ org.marketcetera.util.misc;version="3.1.0"

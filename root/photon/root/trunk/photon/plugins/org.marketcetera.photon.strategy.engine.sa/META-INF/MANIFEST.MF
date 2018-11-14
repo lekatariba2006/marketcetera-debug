@@ -14,11 +14,9 @@ Export-Package: org.marketcetera.photon.strategy.engine.model.sa,
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.marketcetera.photon.strategy.engine;visibility:=reexport,
- org.marketcetera.util,
  org.marketcetera.photon.commons,
  org.marketcetera.photon.core,
- org.marketcetera.saclient,
- org.marketcetera.core,
- org.marketcetera.photon.module
+ org.marketcetera.photon.module,
+ org.marketcetera.thirdparty
 Bundle-ActivationPolicy: lazy
 Eclipse-ExtensibleAPI: true
