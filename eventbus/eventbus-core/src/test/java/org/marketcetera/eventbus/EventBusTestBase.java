@@ -52,7 +52,9 @@ public abstract class EventBusTestBase<ServiceClazz extends EventBusService>
     public void cleanup()
             throws Exception
     {
-        eventBusService.unregister(this);
+        try {
+            eventBusService.unregister(this);
+        } catch (Exception ignored) {}
     }
     /**
      * Test event bus throughput.
@@ -93,6 +95,7 @@ public abstract class EventBusTestBase<ServiceClazz extends EventBusService>
         EventBusTestEvent testEvent1 = new EventBusTestEvent();
         eventBusService.post(testEvent1);
         verifySameTestEvent(testEvent1);
+        eventBusService.unregister(this);
     }
     /**
      * Receive test event values.
