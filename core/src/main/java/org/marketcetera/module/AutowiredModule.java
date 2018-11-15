@@ -18,9 +18,4 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface AutowiredModule
 {
-    /**
-     * Declares whether the annotated dependency is required.
-     * <p>Defaults to {@code true}.
-     */
-    boolean required() default true;
 }
