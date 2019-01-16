@@ -10,7 +10,7 @@ import org.marketcetera.util.misc.ClassVersion;
  * StrategyAgent module for {@link BogusFeed}.
  * <p>
  * Module Features
- * <table summary="Describes the module attributes">
+ * <table>
  * <tr><th>Factory:</th><td>{@link BogusFeedModuleFactory}</td></tr>
  * <tr><th colspan="2">See {@link AbstractMarketDataModule parent} for module features.</th></tr>
  * </table>

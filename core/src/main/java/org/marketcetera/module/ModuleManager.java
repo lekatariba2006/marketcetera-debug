@@ -72,7 +72,7 @@ import org.springframework.context.ApplicationContextAware;
  *     the module when stopping and removing it.</li>
  *  <li>Module lifecycle operations like start and stop, acquire Module
  *      {@link Module#getLock() write lock} when changing
- *      the module state during the operation. The {@link Module#preStart()} &amp;
+ *      the module state during the operation. The {@link Module#preStart()} &
  *      {@link Module#preStop()} methods are invoked without acquiring any
  *      locks on the module.</li>
  *  <li>Data flow creation operations acquire Module
@@ -1231,11 +1231,7 @@ public final class ModuleManager
             throws BeansException
     {
         try(CloseableLock lock = CloseableLock.create(applicationContextLock.writeLock())) {
-            lock.lock();
             applicationContext = inApplicationContext;
-            if(ApplicationContextProvider.getInstance() != null) {
-                ApplicationContextProvider.getInstance().setApplicationContext(applicationContext);
-            }
         }
     }
     /**

@@ -18,13 +18,13 @@ import org.marketcetera.util.misc.ClassVersion;
  * Provides an <code>ImbalanceEvent</code> implementation for a <code>Spread</code> instrument.
  *
  * @author <a href="mailto:colin@marketcetera.com">Colin DuPlantis</a>
- * @version $Id$
+ * @version $Id: SpreadImbalanceEvent.java 16901 2014-05-11 16:14:11Z colin $
  * @since $Release$
  */
 @ThreadSafe
 @XmlAccessorType(XmlAccessType.NONE)
 @XmlRootElement(name="SpreadImbalance")
-@ClassVersion("$Id$")
+@ClassVersion("$Id: SpreadImbalanceEvent.java 16901 2014-05-11 16:14:11Z colin $")
 public class SpreadImbalanceEvent
         extends AbstractImbalanceEvent
         implements SpreadEvent

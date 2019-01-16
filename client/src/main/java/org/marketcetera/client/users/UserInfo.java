@@ -50,6 +50,7 @@ public class UserInfo
      * @param active The active flag.
      * @param superuser The superuser flag.
      * @param userdata The user data
+     * @param systemdata The system data
      */
 
     public UserInfo(String name,

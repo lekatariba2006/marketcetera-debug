@@ -228,13 +228,9 @@ public class OrderBook
                     throw new UnsupportedOperationException();
             }
             if(inEvent instanceof BidEvent) {
-                synchronized(mBidBook) {
-                    mBidBook.updateLevels();
-                }
+                mBidBook.updateLevels();
             } else if(inEvent instanceof AskEvent) {
-                synchronized(mAskBook) {
-                    mAskBook.updateLevels();
-                }
+                mAskBook.updateLevels();
             }
         }
         SLF4JLoggerProxy.debug(this,

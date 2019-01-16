@@ -23,7 +23,6 @@ public final class ComparableAssert
      * AssertionError} thrown starts with the given message, which may
      * be null if no such custom message prefix is desired.
      *
-     * @param <T> a <code>T extends Comparable&lt;? super T&gt;</code> value
      * @param message The message.
      * @param c The target object.
      * @param cEqual Another object that is equal to (but not the same
@@ -97,7 +96,6 @@ public final class ComparableAssert
      * Asserts that the given target object implements {@link
      * Comparable} correctly.
      *
-     * @param <T> a <code>T extends Comparable&lt;? super T&gt;</code> value
      * @param c The target object.
      * @param cEqual Another object that is equal to (but not the same
      * as) the target object.
@@ -124,7 +122,6 @@ public final class ComparableAssert
      * AssertionError} thrown starts with the given message, which may
      * be null if no such custom message prefix is desired.
      *
-     * @param <T> a <code>T extends Comparable&lt;? super T&gt;</code> value
      * @param message The message.
      * @param c The target object.
      * @param cEqual Another object that is equal to (but not the same
@@ -147,7 +144,6 @@ public final class ComparableAssert
      * Comparable} correctly. No message check takes place during
      * comparison against null.
      *
-     * @param <T> a <code>T extends Comparable&lt;? super T&gt;</code> value
      * @param c The target object.
      * @param cEqual Another object that is equal to (but not the same
      * as) the target object.

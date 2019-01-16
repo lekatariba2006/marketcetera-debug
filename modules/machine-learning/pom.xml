@@ -2,7 +2,7 @@
 <!--
   - Author: toli@marketcetera.com
   - Since: 1.0.0
-  - Version: $Id$
+  - Version: $Id: pom.xml 17189 2016-08-01 14:50:06Z colin $
   - $License$
   -->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -12,7 +12,7 @@
   <parent>
     <groupId>org.marketcetera</groupId>
     <artifactId>modules</artifactId>
-    <version>3.2.0</version>
+    <version>3.1.0</version>
   </parent>
   <artifactId>ml-parent</artifactId>
   <packaging>pom</packaging>

@@ -1,6 +1,6 @@
 /*
  * $Header: /home/jerenkrantz/tmp/commons/commons-convert/cvs/home/cvs/jakarta-commons-sandbox//i18n/src/java/org/apache/commons/i18n/MessageProvider.java,v 1.2 2004/12/29 17:03:55 dflorey Exp $
- * $Revision$
+ * $Revision: 480489 $
  * $Date: 2006-11-29 01:00:46 -0800 (Wed, 29 Nov 2006) $
  *
  * ====================================================================
@@ -47,7 +47,7 @@ public interface MessageProvider {
     /**
      * @param id unique id that specifies a particular message  
      * @param locale the locale for which to return the entries
-     * @return returns a map <code>&lt;entry(String) -&gt; localized text(String)</code> of 
+     * @return returns a map <code>&lt;entry(String) -> localized text(String)<code> of 
      * message entries matching the given message id and locale 
      * @throws MessageNotFoundException thrown if no message could be found matching the given message id
      */

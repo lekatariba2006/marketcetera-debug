@@ -65,9 +65,7 @@ public class ResourceBundleMessageProvider implements MessageProvider {
         }
     }
     /**
-     * Create a new ResourceBundleMessageProvider instance.
      *
-     * @param baseName a <code>String</code> value
      * @throws MessageNotFoundException Thrown if the resource bundle does not exist.
      */
     public ResourceBundleMessageProvider(String baseName) throws MessageNotFoundException {

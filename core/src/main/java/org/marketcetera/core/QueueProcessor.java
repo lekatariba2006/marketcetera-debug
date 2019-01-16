@@ -63,22 +63,22 @@ public abstract class QueueProcessor<Clazz>
                                           threadDescriptor);
             throw new RuntimeException(e);
         }
-        String metricName = name(getClass().getSimpleName(),
+        String metricName = name(getClass(),
                                  threadDescriptor,
                                  "sizeHistogram");
         queueSizeMetric = metrics.histogram(metricName);
         metricNames.add(metricName);
-        metricName = name(getClass().getSimpleName(),
+        metricName = name(getClass(),
                           threadDescriptor,
                           "queueCounter");
         queueCounterMetric = metrics.counter(metricName);
         metricNames.add(metricName);
-        metricName = name(getClass().getSimpleName(),
+        metricName = name(getClass().getName(),
                           threadDescriptor,
                           "addMeter");
         addToQueueMetric =  metrics.meter(metricName);
         metricNames.add(metricName);
-        metricName = MetricRegistry.name(getClass().getSimpleName(),
+        metricName = MetricRegistry.name(getClass().getName(),
                                          threadDescriptor,
                                          "processMeter");
         processQueueMetric =  metrics.meter(metricName);

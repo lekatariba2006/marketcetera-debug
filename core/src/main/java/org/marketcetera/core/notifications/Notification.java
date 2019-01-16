@@ -20,75 +20,57 @@ public class Notification
         implements INotification
 {
     /**
-     * Returns a <em>debug</em> priority <code>Notification</code>.
+     * Returns a <em>low</em> priority <code>Notification</code>.
      *
      * @param inSubject a <code>String</code> value
      * @param inBody a <code>String</code> value
      * @param inOriginator a <code>String</code> value
      * @return a <code>Notification</code> value
      */
-    public static Notification debug(String inSubject,
-                                     String inBody,
-                                     String inOriginator)
+    public static Notification low(String inSubject,
+                                   String inBody,
+                                   String inOriginator)
     {
         return new Notification(inSubject,
                                 inBody,
                                 new Date(),
-                                Severity.DEBUG,
+                                Severity.LOW,
                                 inOriginator);
     }
     /**
-     * Returns an <em>info</em> priority <code>Notification</code>.
+     * Returns a <em>medium</em> priority <code>Notification</code>.
      *
      * @param inSubject a <code>String</code> value
      * @param inBody a <code>String</code> value
      * @param inOriginator a <code>String</code> value
      * @return a <code>Notification</code> value
      */
-    public static Notification info(String inSubject,
+    public static Notification medium(String inSubject,
+                                      String inBody,
+                                      String inOriginator)
+    {
+        return new Notification(inSubject,
+                                inBody,
+                                new Date(),
+                                Severity.MEDIUM,
+                                inOriginator);
+    }
+    /**
+     * Returns a <em>high</em> priority <code>Notification</code>.
+     *
+     * @param inSubject a <code>String</code> value
+     * @param inBody a <code>String</code> value
+     * @param inOriginator a <code>String</code> value
+     * @return a <code>Notification</code> value
+     */
+    public static Notification high(String inSubject,
                                     String inBody,
                                     String inOriginator)
     {
         return new Notification(inSubject,
                                 inBody,
                                 new Date(),
-                                Severity.INFO,
-                                inOriginator);
-    }
-    /**
-     * Returns a <em>warn</em> priority <code>Notification</code>.
-     *
-     * @param inSubject a <code>String</code> value
-     * @param inBody a <code>String</code> value
-     * @param inOriginator a <code>String</code> value
-     * @return a <code>Notification</code> value
-     */
-    public static Notification warn(String inSubject,
-                                    String inBody,
-                                    String inOriginator)
-    {
-        return new Notification(inSubject,
-                                inBody,
-                                new Date(),
-                                Severity.WARN,
-                                inOriginator);
-    }
-    /**
-     * Returns an <em>error</em> priority <code>Notification</code>.
-     *
-     * @param inSubject a <code>String</code> value
-     * @param inBody a <code>String</code> value
-     * @param inOriginator a <code>String</code> value
-     * @return a <code>Notification</code> value
-     */
-    public static Notification error(String inSubject,
-                                     String inBody,
-                                     String inOriginator)
-    {
-        return new Notification(inSubject,
-                                inBody,
-                                new Date(),
-                                Severity.ERROR,
+                                Severity.HIGH,
                                 inOriginator);
     }
     /* (non-Javadoc)
@@ -195,7 +177,7 @@ public class Notification
      * @param inBody a <code>String</code> value
      * @param inTimestamp a <code>Date</code> value
      * @param inSeverity a <code>Severity</code> value
-     * @param inOriginator a <code>String</code> value
+     * @param inOriginator a <cod>String</code> value
      */
     public Notification(String inSubject,
                         String inBody,

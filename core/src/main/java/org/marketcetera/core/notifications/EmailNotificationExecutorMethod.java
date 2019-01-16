@@ -28,7 +28,7 @@ import com.google.common.collect.Multimap;
  * Sends notifications via email.
  *
  * @author <a href="mailto:colin@marketcetera.com">Colin DuPlantis</a>
- * @version $Id$
+ * @version $Id: EmailNotificationExecutor.java 85060 2015-12-16 03:19:37Z colin $
  * @since $Release$
  */
 public class EmailNotificationExecutorMethod
@@ -82,7 +82,7 @@ public class EmailNotificationExecutorMethod
     /**
      * Sets the notificationRecipients value.
      *
-     * @param inNotificationRecipients a <code>Map&lt;INotification.Severity,String&gt;</code> value
+     * @param a <code>Map&lt;INotification.Severity,String&gt;</code> value
      */
     public void setNotificationRecipients(Map<INotification.Severity,String> inNotificationRecipients)
     {
