@@ -5,7 +5,7 @@ import org.marketcetera.util.log.SLF4JLoggerProxy;
 /* $License$ */
 
 /**
- * Provides common behavior for notification executor methods.
+ *
  *
  * @author <a href="mailto:colin@marketcetera.com">Colin DuPlantis</a>
  * @version $Id$
@@ -41,7 +41,7 @@ public abstract class AbstractNotificationExecutorMethod
     /**
      * Sets the maximumThreshold value.
      *
-     * @param inMaximumThreshold an <code>INotification.Severity</code> value
+     * @param an <code>INotification.Severity</code> value
      */
     public void setMaximumThreshold(INotification.Severity inMaximumThreshold)
     {
@@ -59,7 +59,7 @@ public abstract class AbstractNotificationExecutorMethod
     /**
      * Sets the minimum threshold value.
      *
-     * @param inMinimumThreshold an <code>INotification.Severity</code> value
+     * @param an <code>INotification.Severity</code> value
      */
     public void setMinimumThreshold(INotification.Severity inMinimumThreshold)
     {
@@ -101,17 +101,17 @@ public abstract class AbstractNotificationExecutorMethod
      */
     protected boolean verifySeverityThreshold(INotification inNotification)
     {
-        INotification.Severity calculatedMinimum = minimumThreshold == null ? INotification.Severity.DEBUG : minimumThreshold;
-        INotification.Severity calculatedMaximum = maximumThreshold == null ? INotification.Severity.ERROR : maximumThreshold;
-        INotification.Severity workingSeverity = inNotification.getSeverity() == null ? INotification.Severity.DEBUG : inNotification.getSeverity();
+        INotification.Severity calculatedMinimum = minimumThreshold == null ? INotification.Severity.LOW : minimumThreshold;
+        INotification.Severity calculatedMaximum = maximumThreshold == null ? INotification.Severity.HIGH : maximumThreshold;
+        INotification.Severity workingSeverity = inNotification.getSeverity() == null ? INotification.Severity.LOW : inNotification.getSeverity();
         return workingSeverity.ordinal() >= calculatedMinimum.ordinal() && workingSeverity.ordinal() <= calculatedMaximum.ordinal();
     }
     /**
      * threshold at or above which to notify
      */
-    private INotification.Severity maximumThreshold = INotification.Severity.ERROR;
+    private INotification.Severity maximumThreshold = INotification.Severity.HIGH;
     /**
      * threshold at or above which to notify
      */
-    private INotification.Severity minimumThreshold = INotification.Severity.DEBUG;
+    private INotification.Severity minimumThreshold = INotification.Severity.LOW;
 }

@@ -1,6 +1,6 @@
 /*
  * $Header: /home/jerenkrantz/tmp/commons/commons-convert/cvs/home/cvs/jakarta-commons-sandbox//i18n/src/java/org/apache/commons/i18n/LocalizedBundle.java,v 1.3 2004/12/29 17:03:55 dflorey Exp $
- * $Revision$
+ * $Revision: 480489 $
  * $Date: 2006-11-29 01:00:46 -0800 (Wed, 29 Nov 2006) $
  *
  * ====================================================================
@@ -38,9 +38,7 @@ import java.util.Locale;
  * the key of the desired message entry.</p>  
  * This class should not be used directly in order to retrieve entries of a message bundle. It is recommended
  * to subclass the <code>LocalizedBundle</code> class in order to define a specific localized bundle. 
- * @see org.apache.commons.i18n.bundles.TextBundle
- * @see org.apache.commons.i18n.bundles.MessageBundle
- * @see org.apache.commons.i18n.bundles.ErrorBundle
+ * @see org.apache.commons.i18n.bundles.TextBundle, MessageBundle, ErrorBundle
  */
 public class LocalizedBundle implements Serializable {
     public final static String ID = "id";

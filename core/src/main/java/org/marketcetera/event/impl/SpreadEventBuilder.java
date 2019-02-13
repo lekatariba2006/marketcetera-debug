@@ -11,10 +11,10 @@ import org.marketcetera.util.misc.ClassVersion;
  * Indicates that the underlying event builder supports the attributes necessary to spread future events.
  *
  * @author <a href="mailto:colin@marketcetera.com">Colin DuPlantis</a>
- * @version $Id$
+ * @version $Id: FutureEventBuilder.java 17116 2016-02-17 22:43:31Z colin $
  * @since 2.1.0
  */
-@ClassVersion("$Id$")
+@ClassVersion("$Id: FutureEventBuilder.java 17116 2016-02-17 22:43:31Z colin $")
 public interface SpreadEventBuilder<B>
         extends ProviderSymbolBuilder<B>, DeliveryTypeBuilder<B>, ContractSizeBuilder<B>
 {

@@ -150,7 +150,6 @@ public class StatelessClient
      * Retrieves the client-side proxy for the given service
      * interface.
      *
-     * @param <T> a <code>T extends StatelessServiceBase</code> value
      * @param inInterface The interface class.
      */
 

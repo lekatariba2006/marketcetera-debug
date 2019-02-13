@@ -1,10 +1,6 @@
 package org.marketcetera.marketdata.core.webservice;
 
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 import org.marketcetera.core.notifications.ServerStatusListener;
 import org.marketcetera.event.Event;
@@ -13,6 +9,7 @@ import org.marketcetera.marketdata.Content;
 import org.marketcetera.marketdata.MarketDataRequest;
 import org.marketcetera.trade.Instrument;
 import org.marketcetera.util.misc.ClassVersion;
+import org.marketcetera.util.ws.stateful.ClientContext;
 import org.springframework.context.Lifecycle;
 
 /* $License$ */
@@ -32,10 +29,10 @@ public interface MarketDataServiceClient
      * Request market data.
      * 
      * <p>Begins a market data subscription. The returned id can be
-     * used to retrieve events via {@link #getEvents(long)}.
+     * used to retrieve events via {@link #getEvents(ClientContext, long)}.
      * If the <code>inStreamEvents</code> value is true, events will be queued
      * for retrieval. If false, events will not be retrieved, but you can
-     * determine if the market data contents have changed via {@link #getLastUpdate(long)}.
+     * determine if the market data contents have changed via {@link #getLastUpdate(ClientContext, long)}.
      * 
      * @param inRequest a <code>MarketDataRequest</code> value
      * @param inStreamEvents a <code>boolean</code> value
@@ -73,7 +70,7 @@ public interface MarketDataServiceClient
     /**
      * Gets the most recent snapshot of the given market data.
      * 
-     * <p>Market data must be pre-requested via {@link #request(MarketDataRequest, boolean)}.
+     * <p>Market data must be pre-requested via {@link #request(ClientContext, MarketDataRequest, boolean)}.
      *
      * @param inInstrument an <code>Instrument</code> value
      * @param inContent a <code>Content</code> value
@@ -86,7 +83,7 @@ public interface MarketDataServiceClient
     /**
      * Gets a subset of the most recent snapshot available of the given market data.
      *
-     * <p>Market data must be pre-requested via {@link #request(MarketDataRequest, boolean)}.
+     * <p>Market data must be pre-requested via {@link #request(ClientContext, MarketDataRequest, boolean)}.
      *
      * @param inInstrument an <code>Instrument</code> value
      * @param inContent a <code>Content</code> value

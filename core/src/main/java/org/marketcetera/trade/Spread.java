@@ -92,14 +92,6 @@ public class Spread
         leg2 = inLeg2;
     }
     /**
-     * Create a new Spread instance.
-     */
-    protected Spread()
-    {
-        leg1 = null;
-        leg2 = null;
-    }
-    /**
      * symbol value
      */
     private volatile String symbol;

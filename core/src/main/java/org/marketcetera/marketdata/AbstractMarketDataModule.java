@@ -50,7 +50,7 @@ import com.google.common.collect.Maps;
  * may extend this class.
  * <p>
  * Module Features
- * <table summary="Indicates the module features">
+ * <table>
  * <tr><th>Capabilities</th><td>Data Emitter</td></tr>
  * <tr><th>Stops data flows</th><td>No</td></tr>
  * <tr><th>Start Operation</th><td>Starts the feed, logs into it.</td></tr>
@@ -345,7 +345,7 @@ public abstract class AbstractMarketDataModule<T extends MarketDataFeedToken,
     /**
      * Get the feed value.
      *
-     * @return a <code>MarketDataFeed&lt;T,C&gt;</code> value
+     * @return a <code>MarketDataFeed<T,C></code> value
      */
     protected MarketDataFeed<T,C> getFeed()
     {

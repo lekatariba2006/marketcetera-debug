@@ -132,7 +132,7 @@ public class Strategy
     protected final void notifyLow(String inSubject,
                                    String inBody)
     {
-        sendNotification(Notification.debug(inSubject,
+        sendNotification(Notification.low(inSubject,
                                           inBody,
                                           this.toString()));
     }
@@ -145,7 +145,7 @@ public class Strategy
     protected final void notifyMedium(String inSubject,
                                       String inBody)
     {
-        sendNotification(Notification.warn(inSubject,
+        sendNotification(Notification.medium(inSubject,
                                              inBody,
                                              this.toString()));
     }
@@ -158,7 +158,7 @@ public class Strategy
     protected final void notifyHigh(String inSubject,
                                     String inBody)
     {
-        sendNotification(Notification.error(inSubject,
+        sendNotification(Notification.high(inSubject,
                                            inBody,
                                            this.toString()));
     }

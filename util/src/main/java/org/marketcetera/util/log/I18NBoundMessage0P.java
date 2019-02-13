@@ -26,12 +26,13 @@ public class I18NBoundMessage0P
     // CONSTRUCTORS.
 
     /**
-     * Create a new I18NBoundMessage0P instance.
+     * Constructor mirroring superclass constructor.
      *
-     * @param message an <code>I18NMessage0P</code> value
      * @see I18NBoundMessageBase#I18NBoundMessageBase(I18NMessage,Serializable...)
      */
-    public I18NBoundMessage0P(I18NMessage0P message)
+
+    public I18NBoundMessage0P
+        (I18NMessage0P message)
     {
         super(message);
     }

@@ -8,7 +8,7 @@ import java.util.Date;
  * Provides a custom {@link INotification} for {@link PagerDutyNotificationExecutorMethod}.
  *
  * @author <a href="mailto:colin@marketcetera.com">Colin DuPlantis</a>
- * @version $Id$
+ * @version $Id: PagerDutyNotification.java 85003 2015-11-13 15:57:55Z colin $
  * @since $Release$
  */
 public class PagerDutyNotificationImpl
@@ -89,7 +89,7 @@ public class PagerDutyNotificationImpl
     /**
      * Sets the eventType value.
      *
-     * @param inEventType an <code>EventType</code> value
+     * @param an <code>EventType</code> value
      */
     public void setEventType(PagerDutyEventType inEventType)
     {
@@ -98,7 +98,7 @@ public class PagerDutyNotificationImpl
     /**
      * Sets the incidentKey value.
      *
-     * @param inIncidentKey a <code>String</code> value
+     * @param a <code>String</code> value
      */
     public void setIncidentKey(String inIncidentKey)
     {

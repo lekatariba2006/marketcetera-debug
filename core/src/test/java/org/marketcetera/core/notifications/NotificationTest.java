@@ -24,80 +24,61 @@ public class NotificationTest
     {
         long beginTime = System.currentTimeMillis();
         Thread.sleep(100);
-        // test debug
+        // test low
         String subject = "subject_" + System.nanoTime(); //$NON-NLS-1$
         String body = "body_" + System.nanoTime(); //$NON-NLS-1$
         String originator = this.getClass().toString();
-        Notification debug = Notification.debug(subject,
-                                                body,
-                                                originator);
-        assertNotNull(debug);
+        Notification low = Notification.low(subject,
+                                            body,
+                                            originator);
+        assertNotNull(low);
         assertEquals(subject,
-                     debug.getSubject());
+                     low.getSubject());
         assertEquals(body,
-                     debug.getBody());
+                     low.getBody());
         assertEquals(originator,
-                     debug.getOriginator());
-        assertEquals(Severity.DEBUG,
-                     debug.getSeverity());
-        assertNotNull(debug.getTimestamp());
-        assertTrue(debug.getTimestamp().getTime() > beginTime);
-        // test info
+                     low.getOriginator());
+        assertEquals(Severity.LOW,
+                     low.getSeverity());
+        assertNotNull(low.getTimestamp());
+        assertTrue(low.getTimestamp().getTime() > beginTime);
+        // test medium
         Thread.sleep(100);
         subject = "subject_" + System.nanoTime(); //$NON-NLS-1$
         body = "body_" + System.nanoTime(); //$NON-NLS-1$
         originator = Notification.class.toString();
-        Notification info = Notification.info(subject,
+        Notification medium = Notification.medium(subject,
+                                                  body,
+                                                  originator);
+        assertNotNull(medium);
+        assertEquals(subject,
+                     medium.getSubject());
+        assertEquals(body,
+                     medium.getBody());
+        assertEquals(originator,
+                     medium.getOriginator());
+        assertEquals(Severity.MEDIUM,
+                     medium.getSeverity());
+        assertNotNull(medium.getTimestamp());
+        assertTrue(medium.getTimestamp().getTime() > low.getTimestamp().getTime());
+        // test high
+        Thread.sleep(100);
+        subject = "subject_" + System.nanoTime(); //$NON-NLS-1$
+        body = "body_" + System.nanoTime(); //$NON-NLS-1$
+        originator = Notification.class.toString();
+        Notification high = Notification.high(subject,
                                               body,
                                               originator);
-        assertNotNull(info);
+        assertNotNull(high);
         assertEquals(subject,
-                     info.getSubject());
+                     high.getSubject());
         assertEquals(body,
-                     info.getBody());
+                     high.getBody());
         assertEquals(originator,
-                     info.getOriginator());
-        assertEquals(Severity.INFO,
-                     info.getSeverity());
-        assertNotNull(info.getTimestamp());
-        assertTrue(info.getTimestamp().getTime() > debug.getTimestamp().getTime());
-        // test warn
-        Thread.sleep(100);
-        subject = "subject_" + System.nanoTime(); //$NON-NLS-1$
-        body = "body_" + System.nanoTime(); //$NON-NLS-1$
-        originator = Notification.class.toString();
-        Notification warn = Notification.warn(subject,
-                                              body,
-                                              originator);
-        assertNotNull(warn);
-        assertEquals(subject,
-                     warn.getSubject());
-        assertEquals(body,
-                     warn.getBody());
-        assertEquals(originator,
-                     warn.getOriginator());
-        assertEquals(Severity.WARN,
-                     warn.getSeverity());
-        assertNotNull(warn.getTimestamp());
-        assertTrue(warn.getTimestamp().getTime() > info.getTimestamp().getTime());
-        // test error
-        Thread.sleep(100);
-        subject = "subject_" + System.nanoTime(); //$NON-NLS-1$
-        body = "body_" + System.nanoTime(); //$NON-NLS-1$
-        originator = Notification.class.toString();
-        Notification error = Notification.error(subject,
-                                                body,
-                                                originator);
-        assertNotNull(error);
-        assertEquals(subject,
-                     error.getSubject());
-        assertEquals(body,
-                     error.getBody());
-        assertEquals(originator,
-                     error.getOriginator());
-        assertEquals(Severity.ERROR,
-                     error.getSeverity());
-        assertNotNull(error.getTimestamp());
-        assertTrue(error.getTimestamp().getTime() > warn.getTimestamp().getTime());
+                     high.getOriginator());
+        assertEquals(Severity.HIGH,
+                     high.getSeverity());
+        assertNotNull(high.getTimestamp());
+        assertTrue(high.getTimestamp().getTime() > medium.getTimestamp().getTime());
     }
 }

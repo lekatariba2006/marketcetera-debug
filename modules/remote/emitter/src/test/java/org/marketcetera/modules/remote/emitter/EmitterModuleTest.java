@@ -219,7 +219,7 @@ public class EmitterModuleTest extends RemoteEmitterTestBase {
                 ClientTest.createOrderFIX(),
                 ClientTest.createCancelReject(),
                 ClientTest.createExecutionReport(),
-                org.marketcetera.core.notifications.Notification.error(
+                org.marketcetera.core.notifications.Notification.high(
                         "Subject", "body", "test.notification"),
                 BigInteger.ONE,
                 "Test String"
